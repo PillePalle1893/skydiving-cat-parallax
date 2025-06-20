@@ -2,6 +2,7 @@
   "name": "scroll-demo",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://pillepalle1893.github.io/skydiving-cat-parallax/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
