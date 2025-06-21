@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import moon from './moon.png';
 import land from './land.png';
 import cat from './cat.gif';
+import oma from './altere-frau.jpg';
 
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
@@ -10,14 +11,7 @@ function App() {
 
   return (
     <div>
-      <Parallax pages={4} ref={ref}>
-        {/* <ParallaxLayer speed={1}>
-            <h2>Welcome to my website</h2>
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={1} speed={0.5}>
-            <h2>Web development is fun!</h2>
-        </ParallaxLayer> */}
+      <Parallax pages={8} ref={ref}>
 
         <ParallaxLayer
           offset={0}
@@ -30,9 +24,9 @@ function App() {
         />
 
         <ParallaxLayer
-          offset={2}
+          offset={5}
           speed={1}
-          factor={4}
+          factor={7}
           style={{
             backgroundImage: `url(${land})`,
             backgroundSize: 'cover',
@@ -40,7 +34,14 @@ function App() {
         ></ParallaxLayer>
 
         <ParallaxLayer
-          sticky={{ start: 0.9, end: 2.5 }}
+          sticky={{ start: 6.9, end: 7 }}
+          style={{ textAlign: 'center' }}
+        >
+          <img src={oma} />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          sticky={{ start: 1, end: 4.5 }}
           style={{ textAlign: 'center' }}
         >
           <img src={cat} />
@@ -49,17 +50,44 @@ function App() {
         <ParallaxLayer
           offset={0.2}
           speed={0.05}
-          onClick={() => ref.current.scrollTo(3)}
         >
-          <h2>Welcome to my website</h2>
+          <h2>Welcome to my website. Follow the cat and scroll</h2>
         </ParallaxLayer>
 
         <ParallaxLayer
           offset={3}
+          speed={1}
+        >
+          <h2>Noch ein Stück</h2>
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={4}
+          speed={1}
+        >
+          <h2>Noch ein Stück</h2>
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={5}
+          speed={1}
+        >
+          <h2>Noch ein Stück</h2>
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={6}
+          speed={1}
+        >
+          <h2>Noch ein Stück</h2>
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={7}
           speed={2}
           onClick={() => ref.current.scrollTo(0)}
         >
-          <h2>Hi Mom!</h2>
+          <h2>Du hast graue Haare xD</h2>
         </ParallaxLayer>
       </Parallax>
     </div>
